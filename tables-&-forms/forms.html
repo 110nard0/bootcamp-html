@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Demo</title>
+</head>
+
+<body>
+    <h1>Forms</h1>
+    <hr>
+
+    <h2>Types</h2>
+    <form action="/amala" method="POST">
+        <!--action attribute specifies where the form is sent
+            method attribute concerns the way data is transmitted-->
+        <input type="button"><br>
+        <input type="checkbox"><br>
+        <input type="color"><br>
+        <input type="date"><br>
+        <input type="datetime"><br>
+        <input type="datetime-local"><br>
+        <input type="email"><br>
+        <input type="file"><br>
+        <input type="hidden"><br>
+        <input type="image"><br>
+        <input type="month"><br>
+        <input type="number" placeholder="enter a number"><br>
+        <input type="password" placeholder="password"><br>
+        <input type="radio"><br>
+        <input type="range"><br>
+        <input type="reset"><br>
+        <input type="search"><br>
+        <input type="submit"><br>
+        <input type="tel"><br>
+        <input type="text" placeholder="username"><br>
+        <input type="time"><br>
+        <input type="url"><br>
+        <input type="week"><br>
+        <!--ALl these are different types of input-->
+
+        <hr>
+
+        <h2>Label I</h2>
+        <div class="preference">
+            <label for="cheese">Do you like cheese?</label>
+            <input type="checkbox" name="cheese" id="cheese">
+        </div>
+
+        <div class="preference">
+            <label for="peas">Do you like peas?</label>
+            <input type="checkbox" name="peas" id="peas">
+        </div>
+        <hr>
+
+        <h2>Label II</h2>
+        <p>
+            <label for="username">Choose a Username:</label>
+            <input type="text" placeholder="username" id="username" name="username">
+        </p>
+        <p>
+            <label for="password">Enter a password:</label>
+            <input type="password" placeholder="password" id="password" name="password">
+        </p>
+        <p>
+            <label for="color">Pick a Color:</label>
+            <input type="color" id="color" name="color">
+        </p>
+        <p>
+            <label for="number">Select a number:</label>
+            <input type="number" placeholder="enter a number" id="number" name="number">
+        </p>
+        <p>
+            <!-- Alternative, less common way of labelling input -->
+            <label>
+                Cancel a Week:
+                <input type="week">
+            </label>
+        </p>
+        <hr>
+
+        <h2>Buttons</h2>
+        <p>
+            <button type="submit">
+                Submit!!
+            </button>
+        </p>
+        <p>
+            <button type="button">
+                Another Button
+            </button>
+        </p>
+        <p>
+            <button type="menu">
+                Menu Button
+            </button>
+        </p>
+        <p>
+            <button type="reset">
+                Reset Button
+            </button>
+        </p>
+        <input type="submit" value="Click Me!">
+    </form>
+
+    <button>OUTSIDE BUTTON</button>
+    <hr>
+
+    <h2>Hijacking Searches</h2>
+    <h3>Search Reddit</h3>
+    <form action="https:www.reddit.com/search">
+        <input type="text" name="q">
+        <button>Search Reddit</button>
+    </form>
+
+    <h3>Search Google</h3>
+    <form action="https://www.google.com/search">
+        <input type="text" name="q">
+        <button>Search Google</button>
+    </form>
+
+    <h3>Search Youtube</h3>
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query">
+        <button>Search Youtube</button>
+    </form>
+    <hr>
+
+    <h2>More Inputs</h2>
+    <form action="/crabs">
+        <p><input type="checkbox" name="agree_terms" id="agree" checked>
+            <label for="agree">I agree to the terms</label>
+        </p>
+        <p>
+            <label for="M">M</label>
+            <input type="radio" name="size" id="M" value="medium">
+        </p>
+        <p>
+            <label for="L">L</label>
+            <input type="radio" name="size" id="L" value="large">
+        </p>
+        <p>
+            <label for="XL">XL</label>
+            <input type="radio" name="size" id="XL" value="xtra-large">
+        </p>
+        <!--checked attribute ensures the input field is filled even after refresh-->
+
+        <p>
+            <label for="menu">Please choose an Entree:</label>
+            <select name="menu" id="menu">
+                <option value="" selected>Select a Hunt</option>
+                <option value="chicken">Chicken</option>
+                <option value="fish">Fish</option>
+                <option value="steak">Steak</option>
+                <option value="veg">Vegetarian</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="cheese">Amount of Cheese:</label>
+            <input type="range" name="cheese_amt" id="cheese" min="10" max="100" step="5" value="15">
+        </p>
+        <p>
+            <label for="tea">Choose cups of tea:</label>
+            <input type="number" id="tea" min="1" max="5">
+        </p>
+        <button>Submit</button>
+        <p>
+            <label for="specials">Describe your ideal dining experience:</label> <br>
+            <textarea name="spec" id="specials" cols="30" rows="10" placeholder="My ideal dining..."></textarea>
+        </p>
+        <!--placeholder attribute displays text in input field prior to interaction -->
+
+    </form>
+    <hr>
+
+    <h2>Validation</h2>
+    <form action="/dummy">
+        <!--required attribute denies submission until input is entered-->
+        <p>
+            <label for="first"> First Name:</label>
+            <input type="text" name="first" id="first" required>
+
+        </p>
+        <p>
+            <label for="last">Last Name:</label>
+            <input type="text" name="last" id="last" required>
+        </p>
+        <p>
+            <label for="user"> Username:</label>
+            <input type="text" name="user" id="user" minlength="5" maxlength="20" required>
+        </p>
+        <p>
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email" required>
+        </p>
+        <p>
+            <label for="num"> Phone Number:</label>
+            <input type="number" name="num" id="num" required>
+        </p>
+        <p>
+            <label for="pass">Choose a Password:</label>
+            <input type="password" name="pass" id="pass" minlength="8" required>
+        </p>
+        <button>Submit</button>
+    </form>
+
+
+
+</body>
+
+</html>
